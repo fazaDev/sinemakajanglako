@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');                         // Nama komunitas
             $table->text('description');                    // Sejarah / tentang
-            $table->string('vision')->nullable();           // Visi
-            $table->string('mission')->nullable();          // Misi
+            $table->text('vision')->nullable();           // Visi
+            $table->text('mission')->nullable();          // Misi
             $table->string('logo')->nullable();             // Logo komunitas
             $table->string('address')->nullable();          // Alamat
             $table->string('email')->nullable();            // Email resmi

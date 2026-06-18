@@ -10,6 +10,7 @@ use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Filament\Support\Enums\Width;
 use Filament\Widgets\AccountWidget;
 use Filament\Widgets\FilamentInfoWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
@@ -27,6 +28,9 @@ class StudioPanelProvider extends PanelProvider
             ->default()
             ->id('studio')
             ->path('studio')
+            ->maxContentWidth(Width::Full)
+            ->sidebarWidth('18rem')
+            ->breadcrumbs(false)
             ->login()
             ->colors([
                 'primary' => Color::Amber,
